@@ -1,4 +1,4 @@
-# 🌦️ Atmosphere — Modern Glassmorphic Weather App
+# 🌦️ Atmosphere - Modern Glassmorphic Weather App
 
 A sleek, responsive, modern Weather Application built with **Vanilla JavaScript**, **CSS3 (Glassmorphism & Custom Properties)**, and **HTML5**. It fetches real-time meteorological data using the **WeatherAPI** service.
 
