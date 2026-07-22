@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A sleek, modern glassmorphic Weather App built with HTML5, CSS3, and JavaScript featuring real-time meteorological data.">
+    <title>Atmosphere - Modern Weather App</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-glow"></div>
+
+    <main class="app-container">
+        <!-- Search Bar Section -->
+        <form class="search-form" id="searchForm">
+            <div class="search-input-wrapper">
+                <input type="text" id="searchInput" class="search-box" placeholder="Search city (e.g. London, Tokyo)"
+                    autocomplete="off" spellcheck="false" aria-label="Search city name">
+                <button type="submit" class="search-btn" aria-label="Submit search">
+                    <img src="images/search.png" alt="Search icon">
+                </button>
+            </div>
+        </form>
+
+        <!-- Error Notification Toast -->
+        <div class="error-banner" id="errorBanner">
+            <span class="error-icon">⚠️</span>
+            <span class="error-text" id="errorText">City not found. Please try again!</span>
+        </div>
+
+        <!-- Loading Spinner State -->
+        <div class="loading-spinner" id="loadingSpinner">
+            <div class="spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+
+        <!-- Weather Info Section -->
+        <div class="weather-content" id="weatherContent">
+            <div class="main-weather">
+                <div class="weather-icon-box">
+                    <img src="images/clear.png" alt="Weather condition icon" id="weatherIcon" class="weather-icon">
+                </div>
+                <h1 class="temperature" id="tempDisplay">--°C</h1>
+                <p class="condition-text" id="conditionText">Sunny</p>
+                <h2 class="city-name" id="cityNameDisplay">Loading...</h2>
+            </div>
+
+            <!-- Climate Details Grid -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon-box">
+                        <img src="images/humidity.png" alt="Humidity Icon">
+                    </div>
+                    <div class="metric-info">
+                        <h4 id="humidityValue">--%</h4>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon-box">
+                        <img src="images/wind.png" alt="Wind Icon">
+                    </div>
+                    <div class="metric-info">
+                        <h4 id="windSpeedValue">-- km/h</h4>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon-box">
+                        <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z" />
+                        </svg>
+                    </div>
+                    <div class="metric-info">
+                        <h4 id="feelsLikeValue">--°C</h4>
+                        <p>Feels Like</p>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon-box">
+                        <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                    </div>
+                    <div class="metric-info">
+                        <h4 id="pressureValue">-- hPa</h4>
+                        <p>Pressure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
